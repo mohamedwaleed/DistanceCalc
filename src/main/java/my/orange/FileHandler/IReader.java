@@ -1,5 +1,8 @@
 package my.orange.FileHandler;
 
-public interface IReader {
+import java.util.ArrayList;
 
+public interface IReader {
+	ArrayList<String> readMapBlock();
+	ArrayList<String> readQueryBlock();
 }

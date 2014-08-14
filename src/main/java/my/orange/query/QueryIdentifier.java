@@ -20,6 +20,7 @@ public abstract class QueryIdentifier {
 		try {
 			c = Class.forName(type);
 			queryType = (IQuery) c.newInstance();
+			queryType.setValue(data);
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

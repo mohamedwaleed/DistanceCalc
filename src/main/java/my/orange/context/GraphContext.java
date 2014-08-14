@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import my.orange.algorithm.IAlgorithm;
+import my.orange.builder.Graph;
 import my.orange.builder.IGraphBuilder;
+import my.orange.query.QueryGraph;
 import my.orange.query.IQuery;
 
 public class GraphContext {
@@ -15,18 +17,7 @@ public class GraphContext {
 	private IGraphBuilder graphBuilder;
 
 	public GraphContext() {
-	}
-
-	public void setAlgorithm(String algorithmType) {
-		// return objects by reflection
-	}
-
-	public boolean executeAlgorithm() {
-		return false;
-	}
-
-	public IAlgorithm getAlgorithm() {
-		return algorithm;
+		graphBuilder = new Graph();
 	}
 
 	public void setAlgorithm(IAlgorithm algorithm) {
@@ -38,7 +29,7 @@ public class GraphContext {
 	}
 
 	public void initliazeGraphBuilder(IQuery QueryMap) {
-		// intilaize graph on context
+		graphBuilder.add(QueryMap);
 	}
 
 	public String resultOfAlogorithm(IQuery graphQuery) {

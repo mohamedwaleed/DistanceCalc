@@ -4,5 +4,10 @@ import my.orange.graphElement.City;
 
 public class Pair {
 	City city1;
-	City city2;
+	Integer distance;
+
+	public Pair(City c, int dis) {
+		this.city1 = c;
+		distance = dis;
+	}
 }

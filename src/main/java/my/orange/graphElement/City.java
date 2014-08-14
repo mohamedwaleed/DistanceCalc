@@ -4,7 +4,7 @@ public class City {
 	
 	private String name;
 	
-	City(String name){
+	public City(String name){
 		this.setName(name);
 	}
 

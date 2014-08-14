@@ -1,17 +1,20 @@
 package my.orange.context;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import my.orange.algorithm.IAlgorithm;
+import my.orange.builder.IGraphBuilder;
+import my.orange.query.IQuery;
 
 public class GraphContext {
 
 	private IAlgorithm algorithm;
 	private String result;
 	private HashMap<String, IAlgorithm> algorithmObjects = new HashMap<String, IAlgorithm>();
+	private IGraphBuilder graphBuilder;
 
-	public GraphContext(String filePath) {
-		// Initialize hashmap with all sub types of algorithms
+	public GraphContext() {
 	}
 
 	public void setAlgorithm(String algorithmType) {
@@ -34,4 +37,11 @@ public class GraphContext {
 		return result;
 	}
 
+	public void initliazeGraphBuilder(IQuery QueryMap) {
+		// intilaize graph on context
+	}
+
+	public String resultOfAlogorithm(IQuery graphQuery) {
+		return "";
+	}
 }

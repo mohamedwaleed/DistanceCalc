@@ -5,6 +5,7 @@ public class Edge {
 	private City from;
 	private City to;
 	private Integer cost;
+	
 	public City getFrom() {
 		return from;
 	}

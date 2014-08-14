@@ -39,8 +39,9 @@ public class QueryGraph implements IQuery {
 	public void setDistance(int distance) {
 		this.distance = distance;
 	}
-
-	public ArrayList<City> getCity() {
+	
+	@Override
+	public ArrayList<City> getCitys() {
 		return city;
 	}
 
@@ -48,8 +49,9 @@ public class QueryGraph implements IQuery {
 		this.city = city;
 	}
 
-	public String getCityfrom() {
-		return cityfrom;
+	@Override
+	public City getCityfrom() {
+		return new City(cityfrom);
 	}
 
 	public void setCityfrom(String cityfrom) {

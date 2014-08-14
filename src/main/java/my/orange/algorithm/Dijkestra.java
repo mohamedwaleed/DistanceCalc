@@ -12,15 +12,21 @@ import my.orange.query.IQuery;
 
 public class Dijkestra implements IAlgorithm {
 
-	public boolean runAlgorithm(IGraphBuilder Graph, IQuery query) {
+	public boolean runAlgorithm(IGraphBuilder graph, IQuery query) {
 
+		dijkestraImplementation(graph, query.getCityfrom().getName(), query
+				.getCitys().get(0).getName());
 		return false;
 	}
 
-	private int dijkestraImplementation(Graph graph,
-			String from, String to) {
+	private int dijkestraImplementation(IGraphBuilder graph, String from,
+			String to) {
 
+		long[] dist = new long[100000];
+		for (int i = 0; i < dist.length; i++)
+			dist[i] = Long.MAX_VALUE;
 		Queue<Pair> queue = new PriorityQueue<Pair>();
+
 		
 		//
 		// int dist[10002];

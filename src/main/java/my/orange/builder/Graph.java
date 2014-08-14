@@ -11,8 +11,8 @@ public class Graph implements IGraphBuilder {
 	public HashMap<City, ArrayList<Pair>> graph = new HashMap<City, ArrayList<Pair>>();
 
 	public void add(IQuery query) {
-		City city1 = new City(((QueryGraph) query).getCityfrom());
-		City city2 = ((QueryGraph) query).getCity().get(0);
+		City city1 = ((QueryGraph) query).getCityfrom();
+		City city2 = ((QueryGraph) query).getCitys().get(0);
 		int distance = ((QueryGraph) query).getDistance();
 		Pair pair = new Pair(city2, distance);
 		if (graph.containsKey(city1)) {
